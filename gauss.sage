@@ -28,12 +28,12 @@ class GaussianRational:
         
         """
         
-        cong = Gauss(b.real, -b.imag)
+        cong = Gauss(b.x, -b.y)
         top = self * cong
-        bottom = b.real**2 + b.imag**2
+        bottom = b.x**2 + b.y**2
         
-        real = top.real / bottom
-        imag = top.imag / bottom
+        real = top.x / bottom
+        imag = top.y / bottom
         
         return Gauss(real,imag)
        
